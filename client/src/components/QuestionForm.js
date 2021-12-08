@@ -39,7 +39,7 @@ function QuestionForm(){
 
   function handleSubmit(event) {
     event.preventDefault();
-    fetch("http://localhost:9292/question", {
+    fetch("/question", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -55,7 +55,8 @@ function QuestionForm(){
       }),
     });
     setFormData(defaultState)
-    history.goBack()
+    window.location.href="/"
+  
   }
   
   return(
@@ -67,9 +68,9 @@ function QuestionForm(){
       >
       Home
       </NavLink>
-      <section style={{display: 'flex', justifyContent: 'center'}}>
+      <section >
         <h1>Add New Question</h1>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} style={{display: 'flex', flexDirection: 'column'}}>
           <label>
             Prompt:
             <input
@@ -147,7 +148,7 @@ function QuestionForm(){
               <option value="6">C++</option>
             </select>
           </label>
-          <button type="submit">Add Question</button>
+          <button type="submit" style={{width: '100px', alignSelf: 'center'}}>Add Question</button>
         </form>
       </section>
     </div>

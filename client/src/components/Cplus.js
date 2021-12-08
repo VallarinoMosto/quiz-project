@@ -18,7 +18,7 @@ const Cplus = props => {
   const [show, setShow ] = useState(false);
 
   useEffect(() => {
-      fetch("http://localhost:9292/subject/7")
+      fetch("/subject/7")
       .then((r) => r.json())
       .then((data) => {
         setQuestions(data.questions);
@@ -26,7 +26,7 @@ const Cplus = props => {
   }, [setQuestions]);
 
   function handleDeleteClick(id) {
-      fetch(`http://localhost:9292/question/${id}`, {
+      fetch(`/question/${id}`, {
         method: "DELETE",
       })
         .then((r) => r.json())

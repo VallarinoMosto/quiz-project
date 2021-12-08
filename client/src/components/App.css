@@ -1,0 +1,175 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  /* background-color: #282c34; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  width: 500px;
+  background-color: #fff;
+}
+
+.modal-header, .modal-footer{
+  padding: 10px;
+}
+
+.modal-title{
+  margin: 0;
+}
+
+.modal-body{
+  padding: 10px, 
+  border-top 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.white_button{
+  margin: auto;
+  display: flex ;
+  position: relative;
+  justify-content: center;
+  width: fit-content;
+  height: 2rem;
+  border-radius: 10px;
+  background: none;
+  color: rgb(25, 25, 25);
+  font-weight: 600;
+  border: 2px solid gray;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover{
+  background-color: #f7f720c2;
+}
+
+.green_button{
+  margin: auto;
+  display: flex ;
+  position: relative;
+  justify-content: center;
+  width: fit-content;
+  height: 2rem;
+  border-radius: 10px;
+  background: #2bf720c2;
+  color: rgb(25, 25, 25);
+  font-weight: 600;
+  border: 2px solid gray;
+  cursor: pointer;
+  outline: none;
+}
+
+.red_button{
+  margin: auto;
+  display: flex ;
+  position: relative;
+  justify-content: center;
+  width: fit-content;
+  height: 2rem;
+  border-radius: 10px;
+  background: #f72020c2;
+  color: rgb(25, 25, 25);
+  font-weight: 600;
+  border: 2px solid gray;
+  cursor: pointer;
+  outline: none;
+} 
+
+
+.selected_answer{
+  margin: auto;
+  display: flex ;
+  position: relative;
+  justify-content: center;
+  width: fit-content;
+  height: 2rem;
+  border-radius: 10px;
+  background: #f7f720c2;
+  color: rgb(25, 25, 25);
+  font-weight: 600;
+  border: 2px solid gray;
+  cursor: pointer;
+  outline: none;
+}
+
+/* .light_mode{
+  background-color: #fff;
+  color: #333;
+
+} */
+
+ /* .mode{
+  background-color: #1a1919;
+  color: #999;
+}  */
+
+
+/* .delete_button{
+  font-size: 12px;
+  margin: auto;
+  display: grid;
+  position: relative;
+  width: 100px;
+  height: 2rem;
+  background: black;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  top: 18px;
+} */
+
+
+/* .App {
+  text-align: center;
+  height: 100vh; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #53565A
+} */
+

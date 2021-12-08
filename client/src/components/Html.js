@@ -18,14 +18,14 @@ const Html = props => {
   const [show, setShow ] = useState(false);
 
   useEffect(() => {
-      fetch("http://localhost:9292/subject/2")
+      fetch("/subject/2")
       .then((r) => r.json())
       .then((data) => {setQuestions(data.questions)
     })
   }, [setQuestions]);
 
   function handleDeleteClick(id) {
-      fetch(`http://localhost:9292/question/${id}`, {
+      fetch(`/question/${id}`, {
         method: "DELETE",
       })
         .then((r) => r.json())

@@ -11,7 +11,7 @@ const Modal = props => {
         setTimeout(() => {
             history.push("/");
             setPoints(0);
-            // window.location.reload();
+            window.location.reload();
         }, 2000);
     }
 

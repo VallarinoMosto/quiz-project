@@ -30,6 +30,7 @@ class QuestionsController < ApplicationController
           render json: question, status: :ok
     end
 
+
     def delete
         question = Question.find(params[:id])
         question.destroy

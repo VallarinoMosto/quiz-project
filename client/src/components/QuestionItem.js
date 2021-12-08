@@ -14,10 +14,10 @@ const linkStyles = {
 
 const QuestionItem = props => {
     const [ disable, setDisable ] = useState(false)
-    const {question, onDeleteClick, questionindex, handleAnswer} = props 
+    const {question, onDeleteClick, questionindex, handleAnswer, setQuestions, questions} = props 
     const {prompt, answer1, answer2, answer3, answer4, id, correct_answer} = question
     const answers = [answer1, answer2, answer3, answer4]
-
+    const questionID = id
     const buttons = answers.map((answer, index) => (
         <Button 
         key={index} 
@@ -34,8 +34,26 @@ const QuestionItem = props => {
     ));
 
     function handleDeleteClick() {
-        onDeleteClick(id);
+        console.log(questionID);
+       fetch(`/question/${questionID}`, {
+           method: 'DELETE',
+       }).then(window.location.reload())
+       
     }
+
+    // function handleDelete(questionID) {
+    //     console.log(questionID)
+        // fetch(`/question/${id}`, {
+        //   method: "DELETE",
+        // })
+        //   .then((r) => r.json())
+        //   .then(() => {
+        //     const updatedQuestions = questions.filter((q) => q.id !== id);
+        //     setQuestions(updatedQuestions);
+           
+        //   });
+    //   }
+
 
     return (
         <li>

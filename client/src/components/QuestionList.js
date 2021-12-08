@@ -4,24 +4,17 @@ import QuestionItem from './QuestionItem';
 function QuestionList({ handleAnswer}){
 
   const [questions, setQuestions] = useState([]);
+ 
 
-  function handleDeleteClick(id) {
-    fetch(`http://localhost:9292/question/${id}`, {
-      method: "DELETE",
-    })
-      .then((r) => r.json())
-      .then(() => {
-        const updatedQuestions = questions.filter((q) => q.id !== id);
-        setQuestions(updatedQuestions);
-      });
-  }
+  
 
   const questionItems = questions.map((q, index) => (
     <QuestionItem
       key={q.id}
       questionindex={index}
       question={q}
-      onDeleteClick={handleDeleteClick}
+      setQuestions={setQuestions}
+      questions={questions}
       handleAnswer={handleAnswer}
     />
   ));
